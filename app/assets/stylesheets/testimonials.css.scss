@@ -1,0 +1,27 @@
+section#testimonials {
+  text-align: center;
+
+  .testimonial-wrapper {
+    display: none;
+
+    .testimonial {
+      padding-top:60px;
+      line-height: 28px;
+      font-size: 18px;
+      font-family: "Lato", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+  .author {
+    padding-bottom:50px;
+    color:#aaa;
+
+    a {
+      color:#fff;
+    }
+  }
+
+  }
+
+}

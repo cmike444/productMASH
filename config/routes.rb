@@ -4,6 +4,10 @@ Productmash::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'pages#index'
+   get 'terms' => 'pages#terms'
+   get 'pricing' => 'pages#pricing'
+   get 'about' => 'pages#about'
+   get 'privacy' => 'pages#privacy'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,17 +1,195 @@
 <section id="landing">
 	<div class="container">
+    <%= render "shared/nav" %>
     <div class="row">
+      <br/>
       <div class="col-md-6 col-md-offset-3">
-        <br/>
-        <h2 class="text-center">Submit a link to your product</h2>
-        <br/>
-          <div class="input-group">
-            <input type="text" class="form-control">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Submit</button>
-            </span>
-          </div>
+        <div class="headline">
+          <h2>Mechanics. &nbsp;Aesthetics.<br/> &nbsp;Sustainability. &nbsp;Human Factors.</h2>
+          <p>Rate your ideas to see how they really stack up.</p>
+          <br/>
+          <a href="#" class="btn btn-default btn-lg box-shadow">Upload Product Visual</a>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <a href="#process" class="scroll">
+          <p>The Process</p>
+          <h2><i class="fa fa-chevron-down"></i></h2></a>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="clients">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="row">
+        <div class="col-md-4 col-sm-4">
+          <p class="used-by">Used&nbsp; by&nbsp; students,&nbsp; studios&nbsp; &amp; &nbsp;fortune 500</p>
+        </div>
+        <div class="col-md-8 col-sm-8">
+          <%= image_tag 'apple.png', class: 'client-img', style: 'height:28px;margin-top:10px;'%>
+          <%= image_tag 'mnml.png', class: 'client-img', style: 'height:22px;'%>
+          <%= image_tag 'jawbone.png', class: 'client-img' %>
+          <%= image_tag 'nest.png', class: 'client-img', style: 'height:30px;' %>
+          <%= image_tag 'ideo.png', class: 'client-img' %>
+          <%= image_tag 'hm.png', class: 'client-img', style: 'height:34px;margin-top:10px;'%>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<section id="process" name="home-process">
+  <div class="container">
+    <div class="row">
+      <div class="process">
+        <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+          <div class="col-md-4">
+            <br/>
+            <%= image_tag "stars.png", class: 'img-responsive process-img' %>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="process-right">
+                <h3>Upload a visual reference</h3>
+                <br/>
+                <p>Whether it's a sketch, rendering or photo, it all starts with a visual that effectively communicates your idea.</p>
+                <br/>
+                <p><a href="#" class="btn btn-minimal">Upload Product Visual</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="process">
+        <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+          <div class="col-md-8">
+            <div class="row">
+              <div class="process-left">
+                <h3>Describe the idea</h3>
+                <br/>
+                <p>Give some context to the visual. Does it have a name? A specific owner? Does it fall within a particular category? Answer some questions so the concept has an opportunity to be fully understood. Not only by yourself, but for others later on.</p>
+                <br/>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <br/>
+            <%= image_tag "stars.png", class: 'img-responsive process-img' %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="process">
+        <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+          <div class="col-md-4">
+            <br/>
+            <%= image_tag "stars.png", class: 'img-responsive process-img' %>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="process-right">
+                <h3>Score a M.A.S.H. card</h3>
+                <br/>
+                <p>This is where the fun starts. Rate your idea on material choice, aesthetics, sustainability and human factors.</p>
+                <br/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="process">
+        <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+          <div class="col-md-8">
+            <div class="row">
+              <div class="process-left">
+                <h3>Iterate &amp; Repeat</h3>
+                <br/>
+                <p>Upload another idea, describe it, score it and see how it compares to the rest of the ideas you've scored.</p>
+                <br/>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <br/>
+            <%= image_tag "stars.png", class: 'img-responsive process-img' %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="process">
+        <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+          <div class="col-md-4">
+            <br/>
+            <%= image_tag "stars.png", class: 'img-responsive process-img' %>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="process-right">
+                <h3>Share with others</h3>
+                <br/>
+                <p>You aren't always the best judge, which is why you should always share your ideas with others to get more feedback.</p>
+                <br/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class='container'>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+
+        <div class="testimonial-wrapper">
+          <div class="testimonial">
+            <p>"This app allows me to get a holistic understanding of how my ideas really stack up regarding thoughtful product design."</p>
+          </div>
+          <div class="author">
+            <a href="#">@peteducato</a>,
+            Industrial Designer at Lifestyle Design
+          </div>
+        </div>
+
+        <div class="testimonial-wrapper">
+          <div class="testimonial">
+            <p>"This app lets me create MASH scores for my concepts super quickly. Much less of a pain in the ass than before."</p>
+          </div>
+          <div class="author">
+            <a href="#">@colinjbehr</a>,
+            Industrial Design Student at Iowa State University
+          </div>
+        </div>
+
+        <div class="testimonial-wrapper">
+          <div class="testimonial">
+            <p>"This is a great little tool that helps inform our designers at a 30,000 ft. view of the overall quality of their concepts."</p>
+          </div>
+          <div class="author">
+            <a href="#">@johnyive</a>,
+            VP of Design at Apple
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
