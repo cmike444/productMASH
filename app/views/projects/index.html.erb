@@ -1,18 +1,28 @@
 <br/>
-<div id="projects">
-  <div class="box">
-      <%= link_to new_project_path do %>
-      <%= image_tag 'create-project.png' %>
-      <% end %>
-      <h4 class="text-center">New Project</h4>
-      
+<div id="projects" class="transitions-enabled">
+  <%= link_to new_project_path do %>
+    <div class="box" style="background: #f4f4f4;">
+        
+        <br/>
+        <br/>
+        <br/>
+        <h1 class="text-center text-primary"><i class="fa fa-plus"></i></h1>
+        <br/>
+        <br/>
+        <br/>
+        
+        <!-- <h4 class="text-center text-primary"><i class="fa fa-plus"></i>New Project</h4> -->
+        
     </div>
+  <% end %>
   <% @projects.each do |project| %>
     <div class="box">
       <%= link_to project_path(project) do %>
       <%= image_tag project.image %>
-      <div class="description-<%= project.id %>">
-        <p><%= project.description %></p>
+      <div class="delete-project">
+        <%= link_to project, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fa fa-times"></i>
+        <% end %>
       </div>
       <% end %>
       <h4 class="text-center"><%= project.name %></h4>
@@ -25,18 +35,12 @@
         <%= link_to edit_project_path(project) do %>
             <i class="fa fa-edit"></i>
           <% end %>
-        <%= link_to project, method: :delete, data: { confirm: 'Are you sure?' } do %>
-            <i class="fa fa-trash"></i>
-          <% end %>
-        <%= link_to " ", id: project.id.to_s.prepend('project-') do %>
+        
+        <%= link_to " ", id: project.id.to_s.prepend('project-'), data: { toggle: 'tooltip', placement: 'top' }, title: project.description  do %>
           <i class="fa fa-info-circle"></i>
         <% end %>
         <script type="text/javascript">
-          $('.description-<%= project.id.to_s %>').hide();
-          $('#project-<%= project.id.to_s %>').click(function(){
-            $('.description').toggle();
-
-          });
+          $('#project-<%= project.id.to_s %>').tooltip();
         </script>
       <% end %>
     </div>
