@@ -30,9 +30,18 @@
                   <span class="caret"></span>
                 <% end %>
                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                  <li role="presentation"><%= link_to("#", role: 'menuitem', tabindex: '-1') do %>
+                    <i class="fa fa-comments-o"></i>&nbsp;&nbsp;
+                    Activity
+                    <% end %></li>
+                  <li role="presentation"><%= link_to(edit_user_registration_path, role: 'menuitem', tabindex: '-1') do %>
+                    <i class="fa fa-cogs"></i>&nbsp;&nbsp;
+                    Account Settings
+                    <% end %></li>
+                  <li role="presentation"><%= link_to("#", role: 'menuitem', tabindex: '-1') do %>
+                    <i class="fa fa-share"></i>&nbsp;&nbsp;
+                    Invite Friends
+                    <% end %></li>
                   <li role="presentation" class="divider"></li>
                   <li role="presentation"><%= link_to(destroy_user_session_path, :method => :delete, role: 'menuitem', tabindex: '-1') do %>
                     <i class="fa fa-sign-out"></i>&nbsp;&nbsp;
