@@ -12,7 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require masonry/jquery.masonry
 //= require turbolinks
+//= require bootstrap
 //= require_tree .
 
 $(document).ready(function(){
@@ -52,4 +54,5 @@ $(document).ready(function(){
           $(this).delay(2500).fadeOut();
        });
     });
+
 });
