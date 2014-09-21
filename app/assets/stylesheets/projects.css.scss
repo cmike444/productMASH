@@ -1,0 +1,112 @@
+#projects {
+	margin: 0 auto 100px;
+	.fa {padding:0 15px;color:#999;}
+	.fa:hover {color:#666;}
+	.fa-trash:hover {color:#c9302c;}
+	.default-actions{width:180px;}
+	.text-primary i.fa.fa-plus {color:#3B2F63;}
+	.btn-modal i {padding:0px 10px 0px 5px; color:#fff;}
+	.modal-header i.fa.fa-times {padding:0;} 
+}
+
+.navbar-dash {
+	.navbar-brand {color:#444;}
+	li a {color:#444;}
+	li a:hover {color:#666;}
+	li a.lt-nav {color:#999;}
+	li a.lt-nav:hover {color:#794aa2;}
+	.nav .open > a {background:#fff;}
+}
+
+.modal {}
+.modal-backdrop {background:rgba(255, 255, 255, 1);opacity:0.9;}
+@media (min-width: 768px) {
+
+	.modal-dialog {
+		width: 600px;
+		margin: 100px auto;
+	}
+}
+
+
+.box {
+  margin: 5px;
+  width: 214px;
+  border-radius:4px;
+  box-shadow:0px 1px 2px 0px #c8c8c8;
+  overflow: hidden;
+
+  h4.modal-title {margin-bottom:0;}
+
+  .view-project {
+	  position: absolute;
+		left: 25%;
+		top: 25%;
+		display:none;
+
+		button.btn.btn-view-project {
+			background:none;
+			color:#999;
+			border-color:#ccc;
+		}
+		
+	}
+
+  &:hover {
+  	img {
+  		opacity: 0.05;
+  	}
+
+  	.view-project {
+  		display: block;
+  	}
+
+  	.view-project:hover {
+  		display: block;
+  		background: none;
+  	}
+  }
+
+  h4 {
+		margin-bottom:20px;
+	}
+
+	.description {
+		position: absolute;
+		top: 10px;
+		height: 78%;
+		background: rgba(255, 255, 255, 0.95);
+		width:100%;
+
+		p {
+			padding:10px;
+		}
+	}
+
+  .project-actions {
+  	display: block;
+		background: #f9f9f9;
+		border-top: 1px solid #f0f0f0;
+		padding: 5px;
+  }
+}
+
+.delete-project {
+	position: absolute;
+top: 10px;
+right: 0px;
+display:none;
+}
+.box:hover .delete-project{
+	display:block;
+}
+
+.box img {
+  width: 100%;
+  border-bottom:1px solid #ddd;
+  margin-bottom:10px;
+
+  &:hover { 
+  		
+  	}
+}

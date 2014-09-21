@@ -30,6 +30,9 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
+# jQuery Turbolinks
+gem 'jquery-turbolinks'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
@@ -38,6 +41,9 @@ gem 'devise'
 
 # OAuth for Facebook Login
 gem 'omniauth-facebook'
+
+# Masonry
+gem 'masonry-rails', '~> 0.2.0'
 
 
 group :doc do
