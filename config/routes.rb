@@ -1,5 +1,10 @@
 Productmash::Application.routes.draw do
-  resources :projects
+
+  resources :projects do
+    resources :ideas
+  end
+
+  resources :ideas
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   # The priority is based upon order of creation: first created -> highest priority.
