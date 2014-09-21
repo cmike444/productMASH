@@ -38,9 +38,32 @@
 
   h4.modal-title {margin-bottom:0;}
 
+  .view-project {
+	  position: absolute;
+		left: 25%;
+		top: 25%;
+		display:none;
+
+		button.btn.btn-view-project {
+			background:none;
+			color:#999;
+			border-color:#ccc;
+		}
+		
+	}
+
   &:hover {
   	img {
-  		opacity: 0.7;
+  		opacity: 0.05;
+  	}
+
+  	.view-project {
+  		display: block;
+  	}
+
+  	.view-project:hover {
+  		display: block;
+  		background: none;
   	}
   }
 
