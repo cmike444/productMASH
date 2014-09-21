@@ -36,6 +36,9 @@ gem 'jbuilder', '~> 1.2'
 # Devise for users
 gem 'devise'
 
+# OAuth for Facebook Login
+gem 'omniauth-facebook'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
