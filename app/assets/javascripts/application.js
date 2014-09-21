@@ -45,4 +45,11 @@ $(document).ready(function(){
 
         showNextTestimonial();
     })()
+
+
+    $(function() {
+       $('#flash_notice').delay(500).fadeIn('normal', function() {
+          $(this).delay(2500).fadeOut();
+       });
+    });
 });
