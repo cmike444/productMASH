@@ -1,3 +1,15 @@
-// Place all the styles related to the Projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#projects {
+	.fa {padding:0 15px;color:#999;}
+	.fa:hover {color:#666;}
+	.fa-trash:hover {color:#c9302c;}
+	.default-actions{width:180px;}
+}
+
+.navbar-dash {
+	.navbar-brand {color:#444;}
+	li a {color:#444;}
+	li a:hover {color:#666;}
+	li a.lt-nav {color:#999;}
+	li a.lt-nav:hover {color:#794aa2;}
+}
+
