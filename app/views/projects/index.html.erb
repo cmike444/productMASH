@@ -1,25 +1,41 @@
-<h1>Listing projects</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
+      <th><%= link_to new_project_path, class: 'btn btn-primary btn-sm' do %>
+          <i class="fa fa-plus"></i>&nbsp;
+          Add New Project
+        <% end %></th>
       <th></th>
       <th></th>
-      <th></th>
+      <th class="default-actions">
+      </th>
+      
     </tr>
   </thead>
 
-  <tbody>
+  <tbody id="projects">
     <% @projects.each do |project| %>
       <tr>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="default-actions"><%= image_tag project.image, class: 'img-responsive' %></td>
+        <td><%= project.name %></td>
+        <td><%= project.description %></td>
+        <td class="default-actions">
+          <%= link_to project do %>
+            <i class="fa fa-eye"></i>
+          <% end %>
+        
+          <%= link_to edit_project_path(project) do %>
+            <i class="fa fa-edit"></i>
+          <% end %>
+        
+          <%= link_to project, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="fa fa-trash"></i>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Project', new_project_path %>

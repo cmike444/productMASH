@@ -10,8 +10,23 @@
       </ul>
     </div>
   <% end %>
+  <div class="row">
+  <div class="col-md-6 col-sm-6">
+    <label>Project Name</label>
+    <%= f.text_field :name, class: 'form-control', placeholder: 'Project Name' %>
+    <br/>
+    <label>Project Description</label>
+    <%= f.text_area :description, class: 'form-control', placeholder: 'Describe this project...' %>
+    <br/>
+  </div>
+  <div class="col-md-6 col-sm-6">
+    <label>Project Image</label>
+    <%= f.text_field :image, class: 'form-control', placeholder: 'http://www.example.com/image.jpg' %>
+  </div>
+</div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-primary' %>
   </div>
 <% end %>
+<br/>
