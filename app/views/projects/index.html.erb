@@ -1,41 +1,46 @@
-
-<table class="table">
-  <thead>
-    <tr>
-      <th><%= link_to new_project_path, class: 'btn btn-primary btn-sm' do %>
-          <i class="fa fa-plus"></i>&nbsp;
-          Add New Project
-        <% end %></th>
-      <th></th>
-      <th></th>
-      <th class="default-actions">
-      </th>
+<br/>
+<div id="projects">
+  <div class="box">
+      <%= link_to new_project_path do %>
+      <%= image_tag 'create-project.png' %>
+      <% end %>
+      <h4 class="text-center">New Project</h4>
       
-    </tr>
-  </thead>
+    </div>
+  <% @projects.each do |project| %>
+    <div class="box">
+      <%= link_to project_path(project) do %>
+      <%= image_tag project.image %>
+      <div class="description-<%= project.id %>">
+        <p><%= project.description %></p>
+      </div>
+      <% end %>
+      <h4 class="text-center"><%= project.name %></h4>
 
-  <tbody id="projects">
-    <% @projects.each do |project| %>
-      <tr>
-        <td class="default-actions"><%= image_tag project.image, class: 'img-responsive' %></td>
-        <td><%= project.name %></td>
-        <td><%= project.description %></td>
-        <td class="default-actions">
-          <%= link_to project do %>
-            <i class="fa fa-eye"></i>
-          <% end %>
-        
-          <%= link_to edit_project_path(project) do %>
+      <div class="project-actions text-center">
+      <%= link_to project_path(project) do %>
+        <i class="fa fa-eye"></i>
+      <% end %>
+      <% if project.user == current_user %>
+        <%= link_to edit_project_path(project) do %>
             <i class="fa fa-edit"></i>
           <% end %>
-        
-          <%= link_to project, method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <%= link_to project, method: :delete, data: { confirm: 'Are you sure?' } do %>
             <i class="fa fa-trash"></i>
           <% end %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <%= link_to " ", id: project.id.to_s.prepend('project-') do %>
+          <i class="fa fa-info-circle"></i>
+        <% end %>
+        <script type="text/javascript">
+          $('.description-<%= project.id.to_s %>').hide();
+          $('#project-<%= project.id.to_s %>').click(function(){
+            $('.description').toggle();
 
-<br>
+          });
+        </script>
+      <% end %>
+    </div>
+    </div>
+  <% end %>
+</div>
+<br/>
