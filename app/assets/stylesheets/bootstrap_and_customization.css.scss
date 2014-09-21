@@ -24,7 +24,11 @@ a:hover {color:#3B2F63;}
 }
 .dropdown-menu {box-shadow: 0 1px 2px rgba(0, 0, 0, 0.175);}
 
-.text-primary {color:#3B2F63;}
+.text-primary {
+  color:#3B2F63;
+}
+.text-primary i.fa.fa-plus {color:#3B2F63;}
+
 
 .btn.btn-facebook {color:#fff;background:-webkit-linear-gradient(#4c69ba, #3b55a0)}
 

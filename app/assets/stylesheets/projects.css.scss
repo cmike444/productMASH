@@ -4,6 +4,7 @@
 	.fa:hover {color:#666;}
 	.fa-trash:hover {color:#c9302c;}
 	.default-actions{width:180px;}
+	.text-primary i.fa.fa-plus {color:#3B2F63;}
 }
 
 .navbar-dash {
@@ -23,7 +24,9 @@
   overflow: hidden;
 
   &:hover {
-  	
+  	img {
+  		opacity: 0.7;
+  	}
   }
 
   h4 {
@@ -44,10 +47,20 @@
 
   .project-actions {
   	display: block;
-	background: #f9f9f9;
-	border-top: 1px solid #f0f0f0;
-	padding: 5px;
+		background: #f9f9f9;
+		border-top: 1px solid #f0f0f0;
+		padding: 5px;
   }
+}
+
+.delete-project {
+	position: absolute;
+top: 10px;
+right: 0px;
+display:none;
+}
+.box:hover .delete-project{
+	display:block;
 }
 
 .box img {
@@ -56,6 +69,6 @@
   margin-bottom:10px;
 
   &:hover { 
-  		opacity: 0.7;
+  		
   	}
 }
