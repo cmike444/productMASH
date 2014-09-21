@@ -1,4 +1,10 @@
 <br/>
+<div class="row">
+  <div class="col-md-12">
+    <h3>My Projects</h3>
+  </div>
+</div>
+<hr/>
 <div id="projects" class="transitions-enabled">
   <%= link_to new_project_path do %>
     <div class="box" style="background: #f4f4f4;">
@@ -19,12 +25,32 @@
     <div class="box">
       <%= link_to project_path(project) do %>
       <%= image_tag project.image %>
-      <div class="delete-project">
-        <%= link_to project, method: :delete, data: { confirm: 'Are you sure?' } do %>
+      <% end %>
+      <div class="delete-project" data-toggle="modal" data-target="#delete-project-<%= project.id.to_s %>">
+        <% if project.user == current_user %>
           <i class="fa fa-times"></i>
         <% end %>
       </div>
-      <% end %>
+      <div class="modal fade" id="delete-project-<%= project.id.to_s %>">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"><i class="fa fa-times"></i></span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title">Are you sure you want to delete this project?</h4>
+            </div>
+            <div class="modal-body">
+              <p>You can archive this project</p>
+              <p>You will be deleting all of the uploaded ideas, discussion and MASH scores associated to this project.</p>
+            </div>
+            <div class="modal-footer">
+              <%= link_to project, :method => :delete, :data => {confirm: 'Are your sure?'}, class: 'btn btn-danger btn-modal' do %>
+                <i class="fa fa-trash-o"></i>
+                Delete Project
+              <% end %>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
       <h4 class="text-center"><%= project.name %></h4>
 
       <div class="project-actions text-center">
@@ -35,14 +61,14 @@
         <%= link_to edit_project_path(project) do %>
             <i class="fa fa-edit"></i>
           <% end %>
-        
-        <%= link_to " ", id: project.id.to_s.prepend('project-'), data: { toggle: 'tooltip', placement: 'top' }, title: project.description  do %>
+      <% end %>
+      <%= link_to " ", id: project.id.to_s.prepend('project-'), data: { toggle: 'tooltip', placement: 'top' }, title: project.description  do %>
           <i class="fa fa-info-circle"></i>
         <% end %>
         <script type="text/javascript">
           $('#project-<%= project.id.to_s %>').tooltip();
+          
         </script>
-      <% end %>
     </div>
     </div>
   <% end %>
