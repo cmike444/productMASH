@@ -1,0 +1,59 @@
+<div class="container">
+	<div class="row">
+	  <div class="col-md-6">
+		<h3>
+			<%= link_to root_url + 'projects/' + @idea.project_id.to_s do %>
+	        	<i class="fa fa-arrow-left"></i>&nbsp;
+	      	<% end %>
+	      	<%= @idea.name %>
+	      	<%= link_to [:edit, @project, @idea] do %>
+	        &nbsp;<i class="fa fa-edit fa-xs"></i>
+	      	<% end %>
+			<!-- <a href="<%= root_url %>projects/<%= @idea.project_id %>">
+			<i class="fa fa-arrow-left"></i>&nbsp;</a>
+			<%= @idea.name %> -->
+		</h3>
+	  </div>
+	  <div class="col-md-6 text-right">
+	    <br/>
+	    <%= link_to [:new, @project, @idea], class: 'btn btn-primary' do %>
+	      <i class="fa fa-plus"></i>&nbsp;&nbsp;
+	      New Idea
+	    <% end %>
+	  </div>
+	</div>
+	<hr/ style='margin-bottom:0px;'>
+
+	<div class="row">
+		<div class="col-md-8 col-sm-8">
+			<%= image_tag @idea.image, class: 'img-responsive' %>
+		</div>
+		<div class="col-md-4 col-sm-4">
+			
+			
+			
+		</div>	
+	</div>
+</div>
+<section id="mash">
+	<form class="form-horizontal" role="form">
+		<div class="container">
+			<div class="col-md-10 col-md-offset-1">
+				<br/>
+				<br/>
+				<p class="text-center">
+					<i class="fa fa-clock-o"></i>&nbsp;&nbsp;<%= time_ago_in_words(@idea.created_at).gsub('about', '') + ' ago' %>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<span class="likes"><i class="fa fa-comments"></i>12 Comments</span>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<span class="likes"><i class="fa fa-heart"></i>30 Likes</span>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<span class="likes"><i class="fa fa-pie-chart"></i>12 MASH Scores</span>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<span class="likes"><i class="fa fa-bar-chart-o"></i>89 Avg. MASH Score</span>
+				</p>				
+				<br/>
+			</div>
+		</div>
+	</form>
+</section>

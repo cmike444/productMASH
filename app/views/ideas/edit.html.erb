@@ -1,14 +1,12 @@
-
 <div class="container">
 <div class="row">
   <div class="col-md-12">
-    <%= link_to projects_path do %>
+<h3><%= link_to root_url + 'projects/' + @idea.project_id.to_s + '/ideas/' + @idea.id.to_s do %>
 		<i class="fa fa-arrow-left"></i>&nbsp;
-		Back
-	<% end %>
-<h3>New Project</h3>
+	<% end %>Edit Idea</h3>
   </div>
 </div>
 <hr/>
+
 <%= render 'form' %>
 </div>
