@@ -1,6 +1,10 @@
-<h1>Editing idea</h1>
+<div class="row">
+  <div class="col-md-12">
+<h3><%= link_to root_url + 'projects/' + @idea.project_id.to_s + '/ideas/' + @idea.id.to_s do %>
+		<i class="fa fa-arrow-left"></i>&nbsp;
+	<% end %>Edit Idea</h3>
+  </div>
+</div>
+<hr/>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @idea %> |
-<%= link_to 'Back', ideas_path %>

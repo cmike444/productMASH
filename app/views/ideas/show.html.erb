@@ -1,9 +1,24 @@
 <div class="row">
-  <div class="col-md-12">
-<h3><a href="<%= root_url %>projects/<%= @idea.project_id %>">
+  <div class="col-md-6">
+	<h3>
+		<%= link_to root_url + 'projects/' + @idea.project_id.to_s do %>
+        	<i class="fa fa-arrow-left"></i>&nbsp;
+      	<% end %>
+      	<%= @idea.name %>
+      	<%= link_to [:edit, @project, @idea] do %>
+        &nbsp;<i class="fa fa-edit fa-xs"></i>
+      	<% end %>
+		<!-- <a href="<%= root_url %>projects/<%= @idea.project_id %>">
 		<i class="fa fa-arrow-left"></i>&nbsp;</a>
-
-	<%= @idea.name %></h3>
+		<%= @idea.name %> -->
+	</h3>
+  </div>
+  <div class="col-md-6 text-right">
+    <br/>
+    <%= link_to [:new, @project, @idea], class: 'btn btn-primary' do %>
+      <i class="fa fa-plus"></i>&nbsp;&nbsp;
+      New Idea
+    <% end %>
   </div>
 </div>
 <hr/>
