@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row">
-	  <div class="col-md-6">
+	  <div class="col-md-6 col-sm-4">
 		<h3>
 			<%= link_to root_url + 'projects/' + @idea.project_id.to_s do %>
 	        	<i class="fa fa-arrow-left"></i>&nbsp;
@@ -14,25 +14,118 @@
 			<%= @idea.name %> -->
 		</h3>
 	  </div>
-	  <div class="col-md-6 text-right">
+	  <div class="col-md-6 col-sm-8 text-right">
 	    <br/>
-	    <%= link_to [:new, @project, @idea], class: 'btn btn-primary' do %>
-	      <i class="fa fa-plus"></i>&nbsp;&nbsp;
-	      New Idea
+	    <%= link_to '#', class: 'btn btn-blank' do %>
+	      <%= image_tag current_user.avatar, class: 'img-responsive img-circle', style: 'height:30px;' %>
+	      <%= link_to current_user.full_name, "#" %>
+	    <% end %>
+	    &nbsp;
+	    &nbsp;
+	    &nbsp;
+	    &nbsp;
+		&nbsp;
+	    &nbsp;
+	    &nbsp;
+	    &nbsp;
+	    <%= link_to '#', class: 'btn btn-default' do %>
+	      <i class="fa fa-thumbs-up"></i>
+	    <% end %>
+	    &nbsp;
+	    &nbsp;
+	    <%= link_to "#", class: 'btn btn-primary' do %>
+	      <i class="fa fa-gavel"></i>&nbsp;&nbsp;
+	      MASH
 	    <% end %>
 	  </div>
 	</div>
 	<hr/ style='margin-bottom:0px;'>
 
 	<div class="row">
-		<div class="col-md-8 col-sm-8">
+		<div class="col-md-7 col-sm-7">
 			<%= image_tag @idea.image, class: 'img-responsive' %>
 		</div>
-		<div class="col-md-4 col-sm-4">
-			
-			
-			
-		</div>	
+		<div class="col-md-2 col-sm-2">
+			<div class="mash-ratings">
+				<br/>
+				<label>Mechanics</label>
+				<h3><i class="fa fa-star"></i>
+			    <i class="fa fa-star"></i>
+			  	<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i></h3>
+				<br/>
+				<label>Aesthetics</label>
+				<h3><i class="fa fa-star"></i>
+			    <i class="fa fa-star"></i>
+			  	<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i></h3>
+				<br/>
+				<label>Sustainability</label>
+				<h3><i class="fa fa-star"></i>
+			    <i class="fa fa-star"></i>
+			  	<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i></h3>
+				<br/>
+				<label>Human Factors</label>
+				<h3><i class="fa fa-star"></i>
+			    <i class="fa fa-star"></i>
+			  	<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i></h3>
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-3">
+			<div class="messages">
+				<div class="media">
+				  <a class="pull-left" href="#">
+				  	<%= image_tag current_user.avatar, class: 'media-object img-responsive img-circle', style: 'height:18px;' %>
+				  </a>
+				  <div class="media-body">
+				    <h5 class="media-heading">Media heading</h5>
+				    Bacon ipsum dolor sit amet sausage pancetta shank kielbasa flank
+				  </div>
+				</div>
+				<div class="media">
+				  <a class="pull-left" href="#">
+				  	<%= image_tag current_user.avatar, class: 'media-object img-responsive img-circle', style: 'height:18px;' %>
+				  </a>
+				  <div class="media-body">
+				    <h5 class="media-heading">Media heading</h5>
+				    Bacon ipsum dolor sit amet sausage pancetta shank kielbasa flank
+				  </div>
+				</div>
+				<div class="media">
+				  <a class="pull-left" href="#">
+				  	<%= image_tag current_user.avatar, class: 'media-object img-responsive img-circle', style: 'height:18px;' %>
+				  </a>
+				  <div class="media-body">
+				    <h5 class="media-heading">Media heading</h5>
+				    Bacon ipsum dolor sit amet sausage pancetta shank kielbasa flank
+				  </div>
+				</div>
+				<div class="media">
+				  <a class="pull-left" href="#">
+				  	<%= image_tag current_user.avatar, class: 'media-object img-responsive img-circle', style: 'height:18px;' %>
+				  </a>
+				  <div class="media-body">
+				    <h5 class="media-heading">Media heading</h5>
+				    Bacon ipsum dolor sit amet sausage pancetta shank kielbasa flank
+				  </div>
+				</div>
+				<div class="media">
+				  <a class="pull-left" href="#">
+				  	<%= image_tag current_user.avatar, class: 'media-object img-responsive img-circle', style: 'height:18px;' %>
+				  </a>
+				  <div class="media-body">
+				    <h5 class="media-heading">Media heading</h5>
+				    Bacon ipsum dolor sit amet sausage pancetta shank kielbasa flank
+				  </div>
+				</div>
+			</div>
+		</div>		
 	</div>
 </div>
 <section id="mash">
@@ -46,7 +139,7 @@
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<span class="likes"><i class="fa fa-comments"></i>12 Comments</span>
 					&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="likes"><i class="fa fa-heart"></i>30 Likes</span>
+					<span class="likes"><i class="fa fa-thumbs-up"></i>30 Likes</span>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<span class="likes"><i class="fa fa-pie-chart"></i>12 MASH Scores</span>
 					&nbsp;&nbsp;&nbsp;&nbsp;
