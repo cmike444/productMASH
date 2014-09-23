@@ -14,6 +14,12 @@
   </div>
   <div class="col-md-6 text-right">
     <br/>
+    <%= link_to new_project_idea_path(@project), class: 'btn btn-default' do %>
+      <div class="badge badge-primary">89</div>&nbsp;&nbsp;
+      Avg. MASH Score
+    <% end %>
+    &nbsp;
+    &nbsp;
     <%= link_to new_project_idea_path(@project), class: 'btn btn-primary' do %>
       <i class="fa fa-plus"></i>&nbsp;&nbsp;
       New Idea
