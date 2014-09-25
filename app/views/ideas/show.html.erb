@@ -28,12 +28,18 @@
 	    &nbsp;
 	    &nbsp;
 	    &nbsp;
+	    
+	    <%= link_to '#', class: 'btn btn-default' do %>
+	      <i class="fa fa-comment"></i>
+	    <% end %>
+	    &nbsp;
+	    &nbsp;
 	    <%= link_to '#', class: 'btn btn-default' do %>
 	      <i class="fa fa-thumbs-up"></i>
 	    <% end %>
 	    &nbsp;
 	    &nbsp;
-	    <%= link_to "#", class: 'btn btn-primary' do %>
+	    <%= link_to [:new, @project, @idea, @mash], class: 'btn btn-primary' do %>
 	      <i class="fa fa-gavel"></i>&nbsp;&nbsp;
 	      MASH
 	    <% end %>
@@ -43,7 +49,11 @@
 
 	<div class="row">
 		<div class="col-md-7 col-sm-7">
-			<%= image_tag @idea.image, class: 'img-responsive' %>
+			<div class="idea-wrapper">
+			<%= image_tag @idea.image, class: 'img-responsive idea-image', id: 'idea' %>
+			<canvas id="idea-canvas"></canvas>
+			</div>
+			
 		</div>
 		<div class="col-md-2 col-sm-2">
 			<div class="mash-ratings">
@@ -79,6 +89,42 @@
 		</div>
 		<div class="col-md-3 col-sm-3">
 			<div class="messages">
+				<div class="media">
+				  <a class="pull-left" href="#">
+				  	<%= image_tag current_user.avatar, class: 'media-object img-responsive img-circle', style: 'height:18px;' %>
+				  </a>
+				  <div class="media-body">
+				    <h5 class="media-heading">Media heading</h5>
+				    Bacon ipsum dolor sit amet sausage pancetta shank kielbasa flank
+				  </div>
+				</div>
+				<div class="media">
+				  <a class="pull-left" href="#">
+				  	<%= image_tag current_user.avatar, class: 'media-object img-responsive img-circle', style: 'height:18px;' %>
+				  </a>
+				  <div class="media-body">
+				    <h5 class="media-heading">Media heading</h5>
+				    Bacon ipsum dolor sit amet sausage pancetta shank kielbasa flank
+				  </div>
+				</div>
+				<div class="media">
+				  <a class="pull-left" href="#">
+				  	<%= image_tag current_user.avatar, class: 'media-object img-responsive img-circle', style: 'height:18px;' %>
+				  </a>
+				  <div class="media-body">
+				    <h5 class="media-heading">Media heading</h5>
+				    Bacon ipsum dolor sit amet sausage pancetta shank kielbasa flank
+				  </div>
+				</div>
+				<div class="media">
+				  <a class="pull-left" href="#">
+				  	<%= image_tag current_user.avatar, class: 'media-object img-responsive img-circle', style: 'height:18px;' %>
+				  </a>
+				  <div class="media-body">
+				    <h5 class="media-heading">Media heading</h5>
+				    Bacon ipsum dolor sit amet sausage pancetta shank kielbasa flank
+				  </div>
+				</div>
 				<div class="media">
 				  <a class="pull-left" href="#">
 				  	<%= image_tag current_user.avatar, class: 'media-object img-responsive img-circle', style: 'height:18px;' %>

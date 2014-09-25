@@ -18,7 +18,7 @@ class IdeasController < ApplicationController
   def new
     @projects = Project.where(:user_id => current_user.id).order('created_at desc')
     @project = Project.find(params[:project_id])
-    @idea = @project.ideas.build
+    @idea = @project.ideas.build(user_id: current_user.id)
   end
 
   # GET /ideas/1/edit
