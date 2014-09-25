@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  durability: 1
+  efficiency: 1
+  assembly: 1
+  proportion: 1
+  scale: 1
+  semantics: 1
+  lifespan: 1
+  recycle: 1
+  process: 1
+  learning_curve: 1
+  barriers: 1
+  safety: 1
+  pleasure: 1
+
+two:
+  durability: 1
+  efficiency: 1
+  assembly: 1
+  proportion: 1
+  scale: 1
+  semantics: 1
+  lifespan: 1
+  recycle: 1
+  process: 1
+  learning_curve: 1
+  barriers: 1
+  safety: 1
+  pleasure: 1

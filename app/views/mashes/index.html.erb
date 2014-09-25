@@ -1,0 +1,61 @@
+<div class="container">
+<div class="row">
+  <div class="col-md-6 col-sm-4">
+    <h3>My MASHes</h3>
+  </div>
+  <div class="col-md-6 col-sm-8 text-right">
+    <br/>
+    <%= link_to new_mash_path, class: 'btn btn-primary' do %>
+      <i class="fa fa-gavel"></i>&nbsp;
+       MASH
+    <% end %>
+  </div>
+</div>
+<hr/>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>User</th>
+      <th>Idea</th>
+      <th>Time</th>
+      <th>Name</th>
+      <th>Score</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mashes.each do |mash| %>
+      <tr>
+        <td><%= mash.id %></td>
+        <td><%= mash.user_id %></td>
+        <td><%= mash.idea_id %></td>
+        <td><%= mash.created_at %></td>
+        <td><%= mash.name %></td>
+        <td><%= mash.total_mash %></td>
+        <td><%= link_to mash.download_link, class: 'btn btn-default btn-sm' do %>
+            <i class="fa fa-link"></i>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to mash, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="fa fa-trash"></i>
+          <% end %>&nbsp;&nbsp;&nbsp;
+          <%= link_to edit_mash_path(mash) do %>
+            <i class="fa fa-edit"></i>
+          <% end %>&nbsp;&nbsp;&nbsp;
+          <%= link_to mash.link do %>
+            <i class="fa fa-share"></i>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+
+<br>

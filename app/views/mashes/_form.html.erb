@@ -1,0 +1,69 @@
+<%= form_for(@mash) do |f| %>
+  <% if @mash.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mash.errors.count, "error") %> prohibited this mash from being saved:</h2>
+
+      <ul>
+      <% @mash.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :durability %><br>
+    <%= f.number_field :durability %>
+  </div>
+  <div class="field">
+    <%= f.label :efficiency %><br>
+    <%= f.number_field :efficiency %>
+  </div>
+  <div class="field">
+    <%= f.label :assembly %><br>
+    <%= f.number_field :assembly %>
+  </div>
+  <div class="field">
+    <%= f.label :proportion %><br>
+    <%= f.number_field :proportion %>
+  </div>
+  <div class="field">
+    <%= f.label :scale %><br>
+    <%= f.number_field :scale %>
+  </div>
+  <div class="field">
+    <%= f.label :semantics %><br>
+    <%= f.number_field :semantics %>
+  </div>
+  <div class="field">
+    <%= f.label :lifespan %><br>
+    <%= f.number_field :lifespan %>
+  </div>
+  <div class="field">
+    <%= f.label :recycle %><br>
+    <%= f.number_field :recycle %>
+  </div>
+  <div class="field">
+    <%= f.label :process %><br>
+    <%= f.number_field :process %>
+  </div>
+  <div class="field">
+    <%= f.label :learning_curve %><br>
+    <%= f.number_field :learning_curve %>
+  </div>
+  <div class="field">
+    <%= f.label :barriers %><br>
+    <%= f.number_field :barriers %>
+  </div>
+  <div class="field">
+    <%= f.label :safety %><br>
+    <%= f.number_field :safety %>
+  </div>
+  <div class="field">
+    <%= f.label :pleasure %><br>
+    <%= f.number_field :pleasure %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

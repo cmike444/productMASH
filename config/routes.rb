@@ -1,7 +1,11 @@
 Productmash::Application.routes.draw do
 
+  
+
   resources :projects do
-    resources :ideas
+    resources :ideas do
+      resources :mashes
+    end
   end
 
   resources :ideas
