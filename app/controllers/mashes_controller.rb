@@ -27,6 +27,33 @@ class MashesController < ApplicationController
   def create
     @mash = Mash.new(mash_params)
     @mash.user_id = current_user.id
+     @mash.durability = 0 
+     @mash.efficiency = 0 
+     @mash.assembly = 0  
+     @mash.proportion = 0
+     @mash.scale = 0
+     @mash.semantics = 0
+     @mash.lifespan = 0
+     @mash.recycle = 0
+     @mash.process = 0
+     @mash.learning_curve = 0
+     @mash.barriers = 0
+     @mash.safety = 0
+     @mash.pleasure = 0
+     @mash.technology = 0
+     @mash.function = 0
+     @mash.parts = 0
+     @mash.service = 0
+     @mash.access = 0
+     @mash.precedent = 0
+     @mash.appropriate = 0
+     @mash.branding = 0
+     @mash.graphics = 0
+     @mash.total_mash = 0
+     @mash.total_mechanics = 0
+     @mash.total_aesthetics = 0
+     @mash.total_sustainability = 0
+     @mash.total_human_factors = 0
 
     respond_to do |format|
       if @mash.save

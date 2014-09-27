@@ -32,6 +32,10 @@ class IdeasController < ApplicationController
     @project = Project.find(params[:project_id]) 
     @idea = @project.ideas.build(idea_params)
     @idea.user_id = current_user.id
+    @idea.score = 0
+    @idea.high_score = 0
+    @idea.low_score = 0
+    @idea.avg_score = 0
 
     respond_to do |format|
       if @idea.save
