@@ -33,6 +33,11 @@ $(document).ready(function(){
          $('html,body').animate({scrollTop:dest}, 1000,'swing');
      });
 
+     $('.new-project-submit').click(function(){
+        $('#newProjectModal').modal('hide');
+        location.reload();
+     });
+
     (function() {
 
         var testimonials = $(".testimonial-wrapper");
@@ -54,6 +59,33 @@ $(document).ready(function(){
        $('#flash_notice').delay(500).fadeIn('normal', function() {
           $(this).delay(2500).fadeOut();
        });
+    });
+    
+    var img = document.getElementById('idea');
+    // var imageWidth = img.width + 'px';
+    var imageHeight = img.height + 'px';
+    $('.messages').css('height', imageHeight);
+    $('#idea-canvas').attr('height', $('#idea').css('height'));
+    $('#idea-canvas').attr('width', $('#idea').css('width'));
+    
+    $("#idea-canvas").click(function(e){ 
+        var img = document.getElementById('idea-canvas');
+        var imageWidth = img.width;
+        var imageHeight = img.height;
+        var x = e.pageX - img.offsetLeft;
+        var y = e.pageY - img.offsetTop; 
+        var ctx = this.getContext('2d');
+        ctx.fillStyle = '#fff';
+        ctx.strokeStyle = '#eee';
+        ctx.shadowColor = '#c8c8c8';
+        ctx.shadowBlur = 1;
+        ctx.shadowOffsetX = 0;
+        ctx.shadowOffsetY = 1;
+        ctx.beginPath();
+        ctx.arc(x, y, 8,0, 2*Math.PI);
+        ctx.stroke();
+        ctx.fill();
+
     });
 
 });
